@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #253858;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+/* NAVIGACIJA */
+.nav-bar {
+  background-color: #1c4da1;
+  padding: 10px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 60px;
+}
+
+.main-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #ffd700;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-title {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(28, 77, 161, 0.7);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 24px;
+  color: white;
+  animation: colorCycle 3s infinite alternate;
+}
+
+@keyframes colorCycle {
+  0%   { color: #ffffff; }
+  50%  { color: #a90202; }
+  100% { color: #1b7831; }
+}
+
+/* CTA */
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #1c4da1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #17408b;
+}
+
+/* GALERIJA */
+.gallery-img {
+  width: 60%;
+  max-width: 400px;
+  display: block;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #1c4da1;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
